@@ -1,0 +1,38 @@
+{
+ "model": "minlstm",
+ "repo": "(new) lucidrains/minGRU-pytorch 0.2.1",
+ "target_repo": "LM_Dec_AttnFree_minLSTM",
+ "category": "AttnFree",
+ "upstream": "lucidrains/minGRU-pytorch (MIT), pip 0.2.1",
+ "unified": [
+  "minLM with use_lstm=True"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-21 04:27:06",
+ "smoke": false,
+ "params": 22304256,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 1.6777958869934082,
+  "logit_scale": 2.8186645971069337,
+  "length": 256,
+  "positions": [
+   17,
+   101,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 0.5
+}

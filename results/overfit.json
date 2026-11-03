@@ -1,0 +1,24 @@
+{
+ "model": "minlstm",
+ "repo": "(new) lucidrains/minGRU-pytorch 0.2.1",
+ "target_repo": "LM_Dec_AttnFree_minLSTM",
+ "category": "AttnFree",
+ "upstream": "lucidrains/minGRU-pytorch (MIT), pip 0.2.1",
+ "unified": [
+  "minLM with use_lstm=True"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-21 04:29:51",
+ "smoke": false,
+ "first_ce": 5.829768180847168,
+ "last_ce": 0.0014141626888886094,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 11.7,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check",
+ "bf16": true
+}
